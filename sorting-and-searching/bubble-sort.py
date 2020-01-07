@@ -4,12 +4,12 @@ import unittest
 # space complexity O(1)
 
 def bubble_sort(arr):
-    length = len(arr)
-    while length >= 2:
-        for i in range(length-1):
+    n = len(arr)
+    while n >= 2:
+        for i in range(n-1):
             if arr[i] > arr[i+1]:
                 arr[i], arr[i+1] = arr[i+1], arr[i]
-        length -= 1
+        n -= 1
 
     return arr
 

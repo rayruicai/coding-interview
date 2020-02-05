@@ -4,13 +4,13 @@ import unittest
 # space complexity O(1)
 
 def insertion_sort(arr):
-    n = len(arr)
-    for i in range(1,n):
+    for i in range(1,len(arr)):
         j = i - 1
-        while (j >= 0) and (arr[j] > arr[j+1]):
-            arr[j], arr[j+1] = arr[j+1], arr[j]
+        while (j >= 0) and (arr[i] < arr[j]):
             j -= 1
-
+        tmp = arr[i]
+        arr[j+2:i+1] = arr[j+1:i]
+        arr[j+1] = tmp
     return arr
 
 class Test(unittest.TestCase):

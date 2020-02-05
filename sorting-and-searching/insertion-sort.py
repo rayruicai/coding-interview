@@ -4,7 +4,8 @@ import unittest
 # space complexity O(1)
 
 def insertion_sort(arr):
-    for i in range(1,len(arr)):
+    n = len(arr)
+    for i in range(1,n):
         j = i - 1
         while (j >= 0) and (arr[i] < arr[j]):
             j -= 1
